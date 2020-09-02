@@ -14,6 +14,10 @@
     $nasc   = filter_input(INPUT_POST, 'nasc'  , FILTER_SANITIZE_MAGIC_QUOTES);
     $obs    = filter_input(INPUT_POST, 'obs'   , FILTER_SANITIZE_MAGIC_QUOTES);
 
+    if(empty($nasc) || is_nan($nasc) || $nasc === ''){
+        $nasc = '0000-00-00';
+    }
+
     $end = $rua . ', ' . $num . ' - ' . $bairro . ', ' . $cep . ', ' . $comp;
 
     $exec = $conexao -> prepare("INSERT INTO proprietario VALUES (NULL, :n, :t, :c, :a, :d, :e, :o)");

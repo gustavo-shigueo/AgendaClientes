@@ -10,6 +10,10 @@
     $agua     = filter_input(INPUT_POST, 'agua'    , FILTER_SANITIZE_MAGIC_QUOTES);
     $luz      = filter_input(INPUT_POST, 'luz'     , FILTER_SANITIZE_MAGIC_QUOTES);
 
+    if(empty($data) || is_nan($data) || $data === ''){
+        $data = '0000-00-00';
+    }
+
     $cliente_array = explode(' | ', $cliente);
     $idC   = $cliente_array[0];
     $nomeC = $cliente_array[1];

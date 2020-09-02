@@ -68,7 +68,7 @@
                 <div class="input-div">
 
                     <label for="data">Data</label><br>
-                    <input type="date" name="data">
+                    <input type="date" name="data" required>
                 
                 </div>
                 <input type="submit" value="Salvar" class="save">

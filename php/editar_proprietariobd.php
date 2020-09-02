@@ -17,6 +17,10 @@
 
     $end = $rua . ', ' . $num . ' - ' . $bairro . ', ' . $cep . ', ' . $comp;
 
+    if(empty($nasc) || is_nan($nasc) || $nasc === ''){
+        $nasc = '0000-00-00';
+    }
+
     $exec = $conexao -> prepare("UPDATE proprietario SET nomeP = :n, telP = :t, CPFP = :c, endP = :a,nascP = :d, emailP = :e, obsP = :o WHERE IDP = :i");
     $dados = array(
         'n' => "$nome", 
