@@ -1,0 +1,69 @@
+.agendar, .novo_cliente, .nova_locacao{
+    width: 95vw;
+    margin: 2.5vh auto;
+    position: relative;
+    min-height: 85vh;
+    .formulario{
+        border-radius: 25px;
+        margin: 0 auto;
+        padding: 5vh 5vw;
+        width: fit-content;
+        border: 3px solid $primary-color;
+        overflow-x: hidden;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+        input, select, textarea{
+            max-width: 100%
+        }
+        .form-title{
+            font-size: 2em;
+            font-weight: bold;
+            width: 100%;
+            border-bottom: 1px solid $accent-color;
+            padding-bottom: .25vh;
+        }
+        .input-div{
+            margin-top: 3vh;
+            display: block;
+            font-size: 1.25em;
+            width: 100%;
+            input, select, textarea{
+                width: 100%;
+                padding: 5px 10px;
+                &::placeholder{
+                    font-weight: normal;
+                    color: $accent-color;
+                }
+            }
+            textarea{
+                resize: vertical;
+                min-height: 10vh;
+            }
+        }
+        .save{
+            margin-top: 3vh;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 2px solid $accent-color;
+            background-color: $secondary-color;
+            transition: all .5s ease-in-out;
+            &:hover{
+                border: 2px solid $secondary-color;
+                color: $secondary-color;
+                background-color: $accent-color;
+            }
+        }
+    }
+}
+.novo_cliente, .nova_locacao{
+    .formulario .form-title{
+        display: flex;
+        align-items: center;
+        .title-btn{
+            cursor: pointer;
+            margin-left: 2vw;
+            font-size: .75em;
+        }
+    }
+}

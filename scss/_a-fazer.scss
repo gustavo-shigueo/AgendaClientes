@@ -1,0 +1,87 @@
+.schedule{
+    width: 95vw;
+    margin: 2.5vh auto;
+    position: relative;
+    .schedule-header{
+        background-color: $table-secondary;
+        color: $secondary-color;
+        .title-row, .category-names{
+            padding: 1.25vh 0;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            margin-bottom: 1.25vh;
+            .title{
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .button a{
+                color: $secondary-color;
+                text-decoration: none;
+            }
+        }
+        .category-names {
+            padding-bottom: 0;
+            width: 1fr;
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: .5vh;
+                width: calc(100% - 100px);
+                position: relative;
+                cursor: pointer;
+                &:not(:last-child){
+                    border-right: 1px solid $secondary-color;
+                }
+                i{
+                    display: none;
+                    position: absolute;
+                    right: .75vw;
+                }
+                &.active, &:hover{
+                    &{
+                        font-size: 1em;
+                        font-weight: 700;
+                    }
+                    i{
+                        display: block;
+                    }
+                }
+                &:last-child, &:nth-child(4){
+                    cursor: text;
+                    &:hover{
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+    .schedule-body{
+        .row{
+            display: flex;
+            align-items: stretch;
+            justify-content: space-around;
+            border-bottom: 1px solid $table-accent;
+            .column{
+                width: 25%;
+                text-align: center;
+                padding: 1vh;
+                &:not(:nth-child(3)){
+                    background-color: $table-primary;
+                }
+                i{
+                    font-size: 12px;
+                    color: #12ad21;
+                    width: 100%;
+                }
+                a{
+                    color: #12ad21;
+                    text-decoration: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
